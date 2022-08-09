@@ -35,97 +35,27 @@ body {font-size:18px;}
 
 <!-- Overlay effect when opening sidebar on small screens -->
 <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
-<!DOCTYPE html>
-<html lang="en">
-<title>Dalton Alves</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
-<style>
-body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
-body {font-size:16px;}
-.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:1;cursor:pointer}
-.w3-half img:hover{opacity:1}
-</style>
-<body>
-
-<!-- Sidebar/menu -->
-<nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
-  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
-  <div class="w3-container">
-    <h3 class="w3-padding-64"><b>Dalton<br>Alves</b></h3>
-  </div>
-  <div class="w3-bar-block">
-    <a href="main.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a>
-    <a href="about.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">About Me</a>
-    <a href="museum.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Museum Work</a>
-    <a href="library.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Library Work</a>
-  </div>
-</nav>
-
-<!-- Top menu on small screens -->
-<header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
-  <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
-  <span>Dalton Alves</span>
-</header>
-
-<!-- Overlay effect when opening sidebar on small screens -->
-<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
 <!-- !PAGE CONTENT! -->
 <div class="w3-main" style="margin-left:340px;margin-right:40px">
 
-  <!-- Header -->
-  <div class="w3-container" style="margin-top:80px" id="Photographs">
-    <h1 class="w3-jumbo"><b>Library Experience</b></h1>
-  </div>
+  <!-- Body text -->
+  <div class="w3-container" style="margin-top:50px">	
+		<div itemscope itemtype="https://schema.org/Person">
+		<p>Hi! My name is <span itemprop="name"><span itemprop="givenname">Dalton</span> <span itemprop="familyname">Alves</span></span>. I am a <span itemprop="hasOccupation">library and museum professional</span> located in <span itemprop="address" itemscope itemtype="https://schema.org/PostalAddress"><span itemprop="addressRegion">Maryland</span></span>. 
+		<br><br>
+		I presently work in <span itemprop="address">Washington, DC</span> in an academic special collections library. As a <span itemprop="hasOccupation">graduate student</span> pursuing an MLIS at <span itemscope itemtype="https://schema.org/Organization"><span itemprop="name">Simmons University</span></span>, I have developed professional interests in libraries and special collections, digitization, art librarianship, and museums.</p>
+		<p>I have previously worked for the <span itemscope itemtype="https://schema.org/Organization"><span itemprop="name">National Park Service</span> in <span itemtype="address">New Hampshire</span> and at libraries and museums throughout <span itemtype="address">Massachusetts</span>.
+	</div>    
 
-  <!-- Digitization photo grid (modal) -->
-  <h1 class="w3-xxxlarge w3-text-red"><b>Digitization and Imaging</b></h1>
-  <hr style="width:300px;border:5px solid red" class="w3-round">
-  <div class="w3-row-padding">
-	<div class="w3-half">
-	  <img src="img/library/SAGA_002492.jpg" style="width:100%">
-		<div class="w3-container">
-			<h4>Veterans of the 54th Massachusetts Volunteer Regiment march at the unveiling of the Shaw Memorial, 1897. Image scanned from a gelatin silver print taken by Augusta Saint-Gaudens, wife of the sculptor of the Memorial.  </h4>
-		</div>
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
     </div>
-    <div class="w3-half">
-      <img src="img/library/SAGA 5_framecropped.jpg" style="width:100%">
-	  <div class="w3-container">
-			<h4>Coast near Mont-Saint-Michel by Alexandre Nozal (1852-1929)</h4>
-		</div>
-    </div>
-	<div class="w3-half">
-	  <img src="img/library/SAGA 1028.jpg" style="width:100%">
-		<div class="w3-container">
-			<h4>Sketch of Temple at Acropolis by Stanford White (1853-1906)</h4>
-		</div>
   </div>
-  
-	<!-- Archives/Lib -->
-  <h1 class="w3-xxxlarge w3-text-red"><b>Archives and Special Collections</b></h1>
-  <hr style="width:300px;border:5px solid red" class="w3-round">
-  <div class="w3-half">
-<ul class="w3-ul w3-card-4" style="width:100%">
-	<li><h2 class="w3-xlarge w3-text-red">Processing and description experience</h2></li>
-	<li>Arranged and described 21st century manuscript collections for an academic special collections in Washington, DC.</li>
-  <li>Processed photographic and audio-visual collections for libraries in Western Massachusetts.</li> 
-  <li>Created DACS compliant finding aids for manuscript collections related to 19th century American Art history for the National Park Service.</li>
-  <li>Completed archives procesing internship at a special collection and archives of a university in New Hampshire.</li>
-</ul>
-	</div>
-	  <div class="w3-half">
-<ul class="w3-ul w3-card-4" style="width:100%">
-	<li><h2 class="w3-xlarge w3-text-red">Reference and Outreach</h2></li>
-  <li>Provide reference services for the users of an academic special collections library in Washington, DC.</li> 
-  <li>Support primary source and library research of National Park Service historians, curators, historic preservations, and educators. </li>
-  <li>Promote cultural heritage collections through public programing and instruction related to primary source research.</li>
-</ul>
-	</div>
-</div>
-
 <!-- End page content -->
 </div>
 
@@ -143,8 +73,15 @@ function w3_close() {
   document.getElementById("mySidebar").style.display = "none";
   document.getElementById("myOverlay").style.display = "none";
 }
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
 </script>
 
 </body>
 </html>
-
